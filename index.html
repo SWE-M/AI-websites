@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,7 @@
             padding: 0;
             line-height: 1.6;
             color: #e0e0e0;
+            text-align: right; /* محاذاة النصوص لليمين */
         }
 
         header {
@@ -42,7 +43,7 @@
 
         /* أزرار اللغة */
         .language-switcher {
-            text-align: right;
+            text-align: left; /* محاذاة أزرار اللغة لليسار */
             margin-bottom: 20px;
         }
 
@@ -100,6 +101,7 @@
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             padding: 20px;
+            text-align: right; /* محاذاة النصوص داخل الكروت لليمين */
         }
 
         .site-card:hover {
@@ -183,7 +185,7 @@
         <div class="sites-grid" id="sites">
             <!-- موقع 1 -->
             <div class="site-card" data-category="كتابة">
-                <h2>ChatGPT (OpenAI)</h2>
+                <h2 id="site-1-title">ChatGPT (OpenAI)</h2>
                 <p id="site-1-desc">روبوت دردشة يعتمد على الذكاء الاصطناعي، يُمكنه الإجابة على الأسئلة، كتابة النصوص، البرمجة، المساعدة في الأفكار الإبداعية، والمزيد.</p>
                 <p><strong id="site-1-free">مجاني أم لا:</strong> نسخة مجانية بميزات محدودة، ونسخة مدفوعة (ChatGPT Plus).</p>
                 <a href="https://chat.openai.com" target="_blank" id="site-1-link">زيارة الموقع</a>
@@ -191,7 +193,7 @@
 
             <!-- موقع 2 -->
             <div class="site-card" data-category="صور">
-                <h2>DALL·E (OpenAI)</h2>
+                <h2 id="site-2-title">DALL·E (OpenAI)</h2>
                 <p id="site-2-desc">أداة لإنشاء الصور بناءً على أوصاف نصية. تتيح لك تصميم صور مبتكرة وفريدة لأي فكرة تخطر في بالك.</p>
                 <p><strong id="site-2-free">مجاني أم لا:</strong> خيارات مجانية محدودة، مع خطط مدفوعة.</p>
                 <a href="https://openai.com/dall-e" target="_blank" id="site-2-link">زيارة الموقع</a>
@@ -199,7 +201,7 @@
 
             <!-- موقع 3 -->
             <div class="site-card" data-category="صور">
-                <h2>MidJourney</h2>
+                <h2 id="site-3-title">MidJourney</h2>
                 <p id="site-3-desc">أداة لتحويل النصوص إلى صور عالية الجودة والفنية. تُستخدم لإنشاء أعمال فنية رقمية احترافية.</p>
                 <p><strong id="site-3-free">مجاني أم لا:</strong> الخدمة مدفوعة باشتراك شهري.</p>
                 <a href="https://www.midjourney.com" target="_blank" id="site-3-link">زيارة الموقع</a>
@@ -207,7 +209,7 @@
 
             <!-- موقع 4 -->
             <div class="site-card" data-category="كتابة">
-                <h2>Jasper.ai</h2>
+                <h2 id="site-4-title">Jasper.ai</h2>
                 <p id="site-4-desc">أداة لإنشاء محتوى تسويقي وكتابة النصوص الترويجية والإعلانات باستخدام الذكاء الاصطناعي.</p>
                 <p><strong id="site-4-free">مجاني أم لا:</strong> لا يوجد إصدار مجاني، ولكن يمكن تجربة الأداة لفترة محدودة.</p>
                 <a href="https://www.jasper.ai" target="_blank" id="site-4-link">زيارة الموقع</a>
@@ -215,7 +217,7 @@
 
             <!-- موقع 5 -->
             <div class="site-card" data-category="أخرى">
-                <h2>Canva (Magic Write)</h2>
+                <h2 id="site-5-title">Canva (Magic Write)</h2>
                 <p id="site-5-desc">أداة تصميم متعددة الاستخدامات تقدم ميزات ذكاء اصطناعي مثل إنشاء النصوص (Magic Write) وتعديل الصور وتحسين التصميمات.</p>
                 <p><strong id="site-5-free">مجاني أم لا:</strong> خطة مجانية بميزات محدودة، ونسخة مدفوعة (Canva Pro).</p>
                 <a href="https://www.canva.com" target="_blank" id="site-5-link">زيارة الموقع</a>
@@ -223,7 +225,7 @@
 
             <!-- موقع 6 -->
             <div class="site-card" data-category="كتابة">
-                <h2>Grammarly</h2>
+                <h2 id="site-6-title">Grammarly</h2>
                 <p id="site-6-desc">أداة لتحسين الكتابة، تُصحح الأخطاء اللغوية والنحوية وتقدم اقتراحات لتحسين الأسلوب.</p>
                 <p><strong id="site-6-free">مجاني أم لا:</strong> نسخة مجانية بميزات أساسية، ونسخة مدفوعة بميزات متقدمة.</p>
                 <a href="https://www.grammarly.com" target="_blank" id="site-6-link">زيارة الموقع</a>
@@ -231,7 +233,7 @@
 
             <!-- موقع 7 -->
             <div class="site-card" data-category="أخرى">
-                <h2>Runway ML</h2>
+                <h2 id="site-7-title">Runway ML</h2>
                 <p id="site-7-desc">منصة لتحرير الفيديو وإنشاء مقاطع مرئية باستخدام الذكاء الاصطناعي (مثل إزالة الخلفيات وتحسين جودة الفيديو).</p>
                 <p><strong id="site-7-free">مجاني أم لا:</strong> خطة مجانية بميزات محدودة، وخطط مدفوعة بميزات إضافية.</p>
                 <a href="https://runwayml.com" target="_blank" id="site-7-link">زيارة الموقع</a>
@@ -239,7 +241,7 @@
 
             <!-- موقع 8 -->
             <div class="site-card" data-category="كتابة">
-                <h2>Notion AI</h2>
+                <h2 id="site-8-title">Notion AI</h2>
                 <p id="site-8-desc">أداة ذكاء اصطناعي مُدمجة في تطبيق Notion تُساعد على كتابة النصوص، تلخيص الملاحظات، واقتراح الأفكار.</p>
                 <p><strong id="site-8-free">مجاني أم لا:</strong> يمكن تجربة النسخة المجانية، لكن الذكاء الاصطناعي يتطلب اشتراكًا مدفوعًا.</p>
                 <a href="https://www.notion.so" target="_blank" id="site-8-link">زيارة الموقع</a>
@@ -247,7 +249,7 @@
 
             <!-- موقع 9 -->
             <div class="site-card" data-category="أخرى">
-                <h2>Descript</h2>
+                <h2 id="site-9-title">Descript</h2>
                 <p id="site-9-desc">أداة لتحرير الصوت والفيديو باستخدام تقنيات الذكاء الاصطناعي. تتيح تحويل النصوص إلى تسجيلات صوتية وتعديل الصوت بسهولة.</p>
                 <p><strong id="site-9-free">مجاني أم لا:</strong> خطة مجانية بميزات محدودة، وخطط مدفوعة بميزات إضافية.</p>
                 <a href="https://www.descript.com" target="_blank" id="site-9-link">زيارة الموقع</a>
@@ -255,7 +257,7 @@
 
             <!-- موقع 10 -->
             <div class="site-card" data-category="أخرى">
-                <h2>DeepL Translator</h2>
+                <h2 id="site-10-title">DeepL Translator</h2>
                 <p id="site-10-desc">أداة ترجمة تعتمد على الذكاء الاصطناعي تُوفر ترجمة دقيقة وطبيعية للنصوص بين لغات متعددة.</p>
                 <p><strong id="site-10-free">مجاني أم لا:</strong> نسخة مجانية لترجمة النصوص العادية، ونسخة مدفوعة لترجمة الملفات.</p>
                 <a href="https://www.deepl.com" target="_blank" id="site-10-link">زيارة الموقع</a>
@@ -294,33 +296,43 @@
                 btnWriting: "أدوات كتابة",
                 btnImages: "توليد صور",
                 btnOther: "أخرى",
+                site1Title: "ChatGPT (OpenAI)",
                 site1Desc: "روبوت دردشة يعتمد على الذكاء الاصطناعي، يُمكنه الإجابة على الأسئلة، كتابة النصوص، البرمجة، المساعدة في الأفكار الإبداعية، والمزيد.",
                 site1Free: "مجاني أم لا:",
                 site1Link: "زيارة الموقع",
+                site2Title: "DALL·E (OpenAI)",
                 site2Desc: "أداة لإنشاء الصور بناءً على أوصاف نصية. تتيح لك تصميم صور مبتكرة وفريدة لأي فكرة تخطر في بالك.",
                 site2Free: "مجاني أم لا:",
                 site2Link: "زيارة الموقع",
+                site3Title: "MidJourney",
                 site3Desc: "أداة لتحويل النصوص إلى صور عالية الجودة والفنية. تُستخدم لإنشاء أعمال فنية رقمية احترافية.",
                 site3Free: "مجاني أم لا:",
                 site3Link: "زيارة الموقع",
+                site4Title: "Jasper.ai",
                 site4Desc: "أداة لإنشاء محتوى تسويقي وكتابة النصوص الترويجية والإعلانات باستخدام الذكاء الاصطناعي.",
                 site4Free: "مجاني أم لا:",
                 site4Link: "زيارة الموقع",
+                site5Title: "Canva (Magic Write)",
                 site5Desc: "أداة تصميم متعددة الاستخدامات تقدم ميزات ذكاء اصطناعي مثل إنشاء النصوص (Magic Write) وتعديل الصور وتحسين التصميمات.",
                 site5Free: "مجاني أم لا:",
                 site5Link: "زيارة الموقع",
+                site6Title: "Grammarly",
                 site6Desc: "أداة لتحسين الكتابة، تُصحح الأخطاء اللغوية والنحوية وتقدم اقتراحات لتحسين الأسلوب.",
                 site6Free: "مجاني أم لا:",
                 site6Link: "زيارة الموقع",
+                site7Title: "Runway ML",
                 site7Desc: "منصة لتحرير الفيديو وإنشاء مقاطع مرئية باستخدام الذكاء الاصطناعي (مثل إزالة الخلفيات وتحسين جودة الفيديو).",
                 site7Free: "مجاني أم لا:",
                 site7Link: "زيارة الموقع",
+                site8Title: "Notion AI",
                 site8Desc: "أداة ذكاء اصطناعي مُدمجة في تطبيق Notion تُساعد على كتابة النصوص، تلخيص الملاحظات، واقتراح الأفكار.",
                 site8Free: "مجاني أم لا:",
                 site8Link: "زيارة الموقع",
+                site9Title: "Descript",
                 site9Desc: "أداة لتحرير الصوت والفيديو باستخدام تقنيات الذكاء الاصطناعي. تتيح تحويل النصوص إلى تسجيلات صوتية وتعديل الصوت بسهولة.",
                 site9Free: "مجاني أم لا:",
                 site9Link: "زيارة الموقع",
+                site10Title: "DeepL Translator",
                 site10Desc: "أداة ترجمة تعتمد على الذكاء الاصطناعي تُوفر ترجمة دقيقة وطبيعية للنصوص بين لغات متعددة.",
                 site10Free: "مجاني أم لا:",
                 site10Link: "زيارة الموقع",
@@ -333,33 +345,43 @@
                 btnWriting: "Writing Tools",
                 btnImages: "Image Generation",
                 btnOther: "Other",
+                site1Title: "ChatGPT (OpenAI)",
                 site1Desc: "An AI-powered chatbot that can answer questions, write text, code, assist with creative ideas, and more.",
                 site1Free: "Free or Paid:",
                 site1Link: "Visit Website",
+                site2Title: "DALL·E (OpenAI)",
                 site2Desc: "A tool for creating images based on text descriptions. It allows you to design innovative and unique images for any idea.",
                 site2Free: "Free or Paid:",
                 site2Link: "Visit Website",
+                site3Title: "MidJourney",
                 site3Desc: "A tool for converting text into high-quality and artistic images. Used to create professional digital artwork.",
                 site3Free: "Free or Paid:",
                 site3Link: "Visit Website",
+                site4Title: "Jasper.ai",
                 site4Desc: "A tool for creating marketing content and writing promotional texts and advertisements using AI.",
                 site4Free: "Free or Paid:",
                 site4Link: "Visit Website",
+                site5Title: "Canva (Magic Write)",
                 site5Desc: "A versatile design tool offering AI features like text generation (Magic Write), image editing, and design enhancements.",
                 site5Free: "Free or Paid:",
                 site5Link: "Visit Website",
+                site6Title: "Grammarly",
                 site6Desc: "A tool for improving writing, correcting grammar and spelling errors, and providing style suggestions.",
                 site6Free: "Free or Paid:",
                 site6Link: "Visit Website",
+                site7Title: "Runway ML",
                 site7Desc: "A platform for video editing and creating visual content using AI (e.g., background removal and video quality enhancement).",
                 site7Free: "Free or Paid:",
                 site7Link: "Visit Website",
+                site8Title: "Notion AI",
                 site8Desc: "An AI tool integrated into Notion that helps with writing, summarizing notes, and suggesting ideas.",
                 site8Free: "Free or Paid:",
                 site8Link: "Visit Website",
+                site9Title: "Descript",
                 site9Desc: "A tool for editing audio and video using AI technologies. It allows converting text to audio recordings and easy audio editing.",
                 site9Free: "Free or Paid:",
                 site9Link: "Visit Website",
+                site10Title: "DeepL Translator",
                 site10Desc: "An AI-powered translation tool that provides accurate and natural translations between multiple languages.",
                 site10Free: "Free or Paid:",
                 site10Link: "Visit Website",
@@ -375,6 +397,9 @@
                     element.textContent = translations[lang][element.id];
                 }
             });
+
+            // تغيير اتجاه الصفحة بناءً على اللغة
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
         }
 
         // دالة لعرض جميع المواقع
