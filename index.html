@@ -178,6 +178,8 @@
             <button onclick="showAll()" id="btn-all">الكل</button>
             <button onclick="filterCategory('كتابة')" id="btn-writing">أدوات كتابة</button>
             <button onclick="filterCategory('صور')" id="btn-images">توليد صور</button>
+            <button onclick="filterCategory('فيديو')" id="btn-video">تحرير فيديو</button>
+            <button onclick="filterCategory('تصميم')" id="btn-design">تصميم</button>
             <button onclick="filterCategory('أخرى')" id="btn-other">أخرى</button>
         </div>
 
@@ -216,7 +218,7 @@
             </div>
 
             <!-- موقع 5 -->
-            <div class="site-card" data-category="أخرى">
+            <div class="site-card" data-category="تصميم">
                 <h2 id="site-5-title">Canva (Magic Write)</h2>
                 <p id="site-5-desc">أداة تصميم متعددة الاستخدامات تقدم ميزات ذكاء اصطناعي مثل إنشاء النصوص (Magic Write) وتعديل الصور وتحسين التصميمات.</p>
                 <p><strong id="site-5-free">مجاني أم لا:</strong> خطة مجانية بميزات محدودة، ونسخة مدفوعة (Canva Pro).</p>
@@ -232,7 +234,7 @@
             </div>
 
             <!-- موقع 7 -->
-            <div class="site-card" data-category="أخرى">
+            <div class="site-card" data-category="فيديو">
                 <h2 id="site-7-title">Runway ML</h2>
                 <p id="site-7-desc">منصة لتحرير الفيديو وإنشاء مقاطع مرئية باستخدام الذكاء الاصطناعي (مثل إزالة الخلفيات وتحسين جودة الفيديو).</p>
                 <p><strong id="site-7-free">مجاني أم لا:</strong> خطة مجانية بميزات محدودة، وخطط مدفوعة بميزات إضافية.</p>
@@ -248,7 +250,7 @@
             </div>
 
             <!-- موقع 9 -->
-            <div class="site-card" data-category="أخرى">
+            <div class="site-card" data-category="فيديو">
                 <h2 id="site-9-title">Descript</h2>
                 <p id="site-9-desc">أداة لتحرير الصوت والفيديو باستخدام تقنيات الذكاء الاصطناعي. تتيح تحويل النصوص إلى تسجيلات صوتية وتعديل الصوت بسهولة.</p>
                 <p><strong id="site-9-free">مجاني أم لا:</strong> خطة مجانية بميزات محدودة، وخطط مدفوعة بميزات إضافية.</p>
@@ -261,6 +263,46 @@
                 <p id="site-10-desc">أداة ترجمة تعتمد على الذكاء الاصطناعي تُوفر ترجمة دقيقة وطبيعية للنصوص بين لغات متعددة.</p>
                 <p><strong id="site-10-free">مجاني أم لا:</strong> نسخة مجانية لترجمة النصوص العادية، ونسخة مدفوعة لترجمة الملفات.</p>
                 <a href="https://www.deepl.com" target="_blank" id="site-10-link">زيارة الموقع</a>
+            </div>
+
+            <!-- موقع 11 -->
+            <div class="site-card" data-category="فيديو">
+                <h2 id="site-11-title">Pictory</h2>
+                <p id="site-11-desc">أداة لإنشاء وتحرير الفيديوهات تلقائيًا من النصوص أو المقالات باستخدام الذكاء الاصطناعي.</p>
+                <p><strong id="site-11-free">مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://pictory.ai" target="_blank" id="site-11-link">زيارة الموقع</a>
+            </div>
+
+            <!-- موقع 12 -->
+            <div class="site-card" data-category="صور">
+                <h2 id="site-12-title">Remove.bg</h2>
+                <p id="site-12-desc">أداة لإزالة خلفيات الصور تلقائيًا باستخدام الذكاء الاصطناعي.</p>
+                <p><strong id="site-12-free">مجاني أم لا:</strong> نسخة مجانية بميزات محدودة، ونسخة مدفوعة.</p>
+                <a href="https://www.remove.bg" target="_blank" id="site-12-link">زيارة الموقع</a>
+            </div>
+
+            <!-- موقع 13 -->
+            <div class="site-card" data-category="تصميم">
+                <h2 id="site-13-title">Adobe Firefly</h2>
+                <p id="site-13-desc">أداة من Adobe تستخدم الذكاء الاصطناعي لإنشاء تصاميم، نصوص، وتعديلات على الصور بسهولة.</p>
+                <p><strong id="site-13-free">مجاني أم لا:</strong> تجربة مجانية، مع خطط مدفوعة.</p>
+                <a href="https://www.adobe.com/sensei/generative-ai/firefly.html" target="_blank" id="site-13-link">زيارة الموقع</a>
+            </div>
+
+            <!-- موقع 14 -->
+            <div class="site-card" data-category="تصميم">
+                <h2 id="site-14-title">Uizard</h2>
+                <p id="site-14-desc">أداة لتصميم واجهات المستخدم (UI/UX) باستخدام الذكاء الاصطناعي، تتيح تحويل الرسومات اليدوية إلى تصاميم رقمية.</p>
+                <p><strong id="site-14-free">مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://uizard.io" target="_blank" id="site-14-link">زيارة الموقع</a>
+            </div>
+
+            <!-- موقع 15 -->
+            <div class="site-card" data-category="فيديو">
+                <h2 id="site-15-title">Synthesia</h2>
+                <p id="site-15-desc">أداة لإنشاء فيديوهات باستخدام شخصيات افتراضية (AI Avatars) تتحدث بلغات متعددة بناءً على النصوص التي تدخلها.</p>
+                <p><strong id="site-15-free">مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.synthesia.io" target="_blank" id="site-15-link">زيارة الموقع</a>
             </div>
         </div>
 
@@ -295,6 +337,8 @@
                 btnAll: "الكل",
                 btnWriting: "أدوات كتابة",
                 btnImages: "توليد صور",
+                btnVideo: "تحرير فيديو",
+                btnDesign: "تصميم",
                 btnOther: "أخرى",
                 site1Title: "ChatGPT (OpenAI)",
                 site1Desc: "روبوت دردشة يعتمد على الذكاء الاصطناعي، يُمكنه الإجابة على الأسئلة، كتابة النصوص، البرمجة، المساعدة في الأفكار الإبداعية، والمزيد.",
@@ -336,6 +380,26 @@
                 site10Desc: "أداة ترجمة تعتمد على الذكاء الاصطناعي تُوفر ترجمة دقيقة وطبيعية للنصوص بين لغات متعددة.",
                 site10Free: "مجاني أم لا:",
                 site10Link: "زيارة الموقع",
+                site11Title: "Pictory",
+                site11Desc: "أداة لإنشاء وتحرير الفيديوهات تلقائيًا من النصوص أو المقالات باستخدام الذكاء الاصطناعي.",
+                site11Free: "مجاني أم لا:",
+                site11Link: "زيارة الموقع",
+                site12Title: "Remove.bg",
+                site12Desc: "أداة لإزالة خلفيات الصور تلقائيًا باستخدام الذكاء الاصطناعي.",
+                site12Free: "مجاني أم لا:",
+                site12Link: "زيارة الموقع",
+                site13Title: "Adobe Firefly",
+                site13Desc: "أداة من Adobe تستخدم الذكاء الاصطناعي لإنشاء تصاميم، نصوص، وتعديلات على الصور بسهولة.",
+                site13Free: "مجاني أم لا:",
+                site13Link: "زيارة الموقع",
+                site14Title: "Uizard",
+                site14Desc: "أداة لتصميم واجهات المستخدم (UI/UX) باستخدام الذكاء الاصطناعي، تتيح تحويل الرسومات اليدوية إلى تصاميم رقمية.",
+                site14Free: "مجاني أم لا:",
+                site14Link: "زيارة الموقع",
+                site15Title: "Synthesia",
+                site15Desc: "أداة لإنشاء فيديوهات باستخدام شخصيات افتراضية (AI Avatars) تتحدث بلغات متعددة بناءً على النصوص التي تدخلها.",
+                site15Free: "مجاني أم لا:",
+                site15Link: "زيارة الموقع",
                 footerText: "جميع الحقوق محفوظة &copy; 2025"
             },
             en: {
@@ -344,6 +408,8 @@
                 btnAll: "All",
                 btnWriting: "Writing Tools",
                 btnImages: "Image Generation",
+                btnVideo: "Video Editing",
+                btnDesign: "Design",
                 btnOther: "Other",
                 site1Title: "ChatGPT (OpenAI)",
                 site1Desc: "An AI-powered chatbot that can answer questions, write text, code, assist with creative ideas, and more.",
@@ -385,6 +451,26 @@
                 site10Desc: "An AI-powered translation tool that provides accurate and natural translations between multiple languages.",
                 site10Free: "Free or Paid:",
                 site10Link: "Visit Website",
+                site11Title: "Pictory",
+                site11Desc: "A tool for creating and editing videos automatically from text or articles using AI.",
+                site11Free: "Free or Paid:",
+                site11Link: "Visit Website",
+                site12Title: "Remove.bg",
+                site12Desc: "A tool for automatically removing image backgrounds using AI.",
+                site12Free: "Free or Paid:",
+                site12Link: "Visit Website",
+                site13Title: "Adobe Firefly",
+                site13Desc: "A tool from Adobe that uses AI to create designs, texts, and image edits easily.",
+                site13Free: "Free or Paid:",
+                site13Link: "Visit Website",
+                site14Title: "Uizard",
+                site14Desc: "A tool for designing user interfaces (UI/UX) using AI, allowing you to convert hand-drawn sketches into digital designs.",
+                site14Free: "Free or Paid:",
+                site14Link: "Visit Website",
+                site15Title: "Synthesia",
+                site15Desc: "A tool for creating videos using virtual characters (AI Avatars) that speak multiple languages based on the text you input.",
+                site15Free: "Free or Paid:",
+                site15Link: "Visit Website",
                 footerText: "All rights reserved &copy; 2025"
             }
         };
@@ -393,8 +479,13 @@
         function changeLanguage(lang) {
             const elements = document.querySelectorAll('[id]');
             elements.forEach(element => {
-                if (translations[lang] && translations[lang][element.id]) {
-                    element.textContent = translations[lang][element.id];
+                const key = element.id;
+                if (translations[lang] && translations[lang][key]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.value = translations[lang][key];
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
                 }
             });
 
