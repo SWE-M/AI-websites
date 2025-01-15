@@ -19,6 +19,8 @@
             line-height: 1.6;
             color: #e0e0e0;
             text-align: right; /* محاذاة النصوص لليمين */
+            position: relative;
+            overflow-x: hidden;
         }
 
         header {
@@ -105,6 +107,8 @@
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
+            position: relative;
+            z-index: 1; /* لجعل المحتوى فوق الخلفية */
         }
 
         /* تصنيفات */
@@ -196,6 +200,8 @@
             text-align: center;
             padding: 20px;
             margin-top: 40px;
+            position: relative;
+            z-index: 1; /* لجعل التذييل فوق الخلفية */
         }
 
         footer p {
@@ -255,6 +261,35 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* عناصر الخلفية */
+        #background-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* لجعلها في الخلفية */
+        }
+
+        .background-element {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.05); /* لون شبه شفاف */
+            font-size: 1.2rem;
+            font-weight: bold;
+            user-select: none; /* منع المستخدم من تحديد النص */
+            opacity: 0.7; /* شفافية */
+            animation: float 20s infinite ease-in-out; /* حركة أبطأ */
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(20vw, -10vh); }
+            50% { transform: translate(-15vw, 15vh); }
+            75% { transform: translate(10vw, -20vh); }
+            100% { transform: translate(0, 0); }
+        }
     </style>
 </head>
 <body>
@@ -264,6 +299,9 @@
         <div class="loader-circle"></div>
         <div class="loader-text">AI</div>
     </div>
+
+    <!-- عناصر الخلفية -->
+    <div id="background-elements"></div>
 
     <header>
         <h1 id="typing-text"></h1>
@@ -516,6 +554,33 @@
 
         // بدء تأثير الكتابة بعد تحميل الصفحة
         window.onload = typeWriter;
+
+        // إنشاء عناصر الخلفية
+        const words = [
+            "AI", "ML", "ChatGPT", "DALL-E", "Neural", "Deep Learning",
+            "Algorithm", "Data", "TensorFlow", "PyTorch", "GAN", "NLP",
+            "Robotics", "Automation", "Vision", "AI Art", "AI Ethics",
+            "AI Tools", "AI Models", "AI Research", "AI Future", "AI Trends"
+        ];
+
+        function createBackgroundElements() {
+            const container = document.getElementById('background-elements');
+            const numElements = 20; // عدد أقل من العناصر
+
+            for (let i = 0; i < numElements; i++) {
+                const element = document.createElement('div');
+                element.classList.add('background-element');
+                element.textContent = words[Math.floor(Math.random() * words.length)]; // اختيار كلمة عشوائية
+                element.style.left = `${Math.random() * 100}vw`; // توزيع أفقي عشوائي
+                element.style.top = `${Math.random() * 100}vh`; // توزيع عمودي عشوائي
+                element.style.animationDuration = `${Math.random() * 20 + 10}s`; // حركة أبطأ
+                element.style.fontSize = `${Math.random() * 1.5 + 1}rem`; // حجم الخط
+                container.appendChild(element);
+            }
+        }
+
+        // بدء إنشاء العناصر عند تحميل الصفحة
+        createBackgroundElements();
     </script>
 
 </body>
