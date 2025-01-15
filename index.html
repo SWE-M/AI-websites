@@ -9,6 +9,7 @@
     <meta name="author" content="اسمك أو اسم شركتك">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.example.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* التصميم العام */
         body {
@@ -18,7 +19,7 @@
             padding: 0;
             line-height: 1.6;
             color: #e0e0e0;
-            text-align: right; /* محاذاة النصوص لليمين */
+            text-align: right;
             position: relative;
             overflow-x: hidden;
         }
@@ -33,7 +34,7 @@
         }
 
         header h1 {
-            font-size: 2rem; /* حجم أصغر للجوال */
+            font-size: 2rem;
             margin: 0;
             color: #00ffcc;
             position: relative;
@@ -55,7 +56,7 @@
         }
 
         header p {
-            font-size: 1rem; /* حجم أصغر للجوال */
+            font-size: 1rem;
             margin: 10px 0 0;
             color: #b0b0b0;
             animation: fadeIn 2s ease-in-out;
@@ -108,16 +109,20 @@
             margin: 20px auto;
             padding: 20px;
             position: relative;
-            z-index: 1; /* لجعل المحتوى فوق الخلفية */
+            z-index: 1;
         }
 
-        /* تصنيفات */
+        /* تصنيفات حديثة */
         .categories {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 30px;
+            padding: 10px;
+            background-color: #242424;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .categories button {
@@ -125,21 +130,43 @@
             background-color: #333333;
             color: #ffffff;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            font-size: 0.9rem; /* حجم أصغر للجوال */
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
         .categories button:hover {
             background-color: #00ffcc;
             color: #121212;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 255, 204, 0.2);
+        }
+
+        .categories button.active {
+            background-color: #00ffcc;
+            color: #121212;
+            box-shadow: 0 4px 8px rgba(0, 255, 204, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .categories {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .categories button {
+                width: 80%;
+                margin: 5px 0;
+            }
         }
 
         /* كروت المواقع */
         .sites-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* تكيف مع الشاشات الصغيرة */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
 
@@ -149,8 +176,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            padding: 15px; /* تباعد أصغر للجوال */
-            text-align: right; /* محاذاة النصوص داخل الكروت لليمين */
+            padding: 15px;
+            text-align: right;
         }
 
         .site-card:hover {
@@ -159,26 +186,26 @@
         }
 
         .site-card h2 {
-            font-size: 1.2rem; /* حجم أصغر للجوال */
+            font-size: 1.2rem;
             margin: 0 0 10px;
             color: #00ffcc;
         }
 
         .site-card p {
-            font-size: 0.9rem; /* حجم أصغر للجوال */
+            font-size: 0.9rem;
             color: #b0b0b0;
             margin: 0 0 10px;
         }
 
         .site-card a {
             display: inline-block;
-            padding: 8px 16px; /* حجم أصغر للجوال */
+            padding: 8px 16px;
             background-color: #00ffcc;
             color: #121212;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
-            font-size: 0.9rem; /* حجم أصغر للجوال */
+            font-size: 0.9rem;
         }
 
         .site-card a:hover {
@@ -187,7 +214,7 @@
 
         /* إعلانات */
         .ad {
-            margin: 20px auto; /* تباعد أقل للجوال */
+            margin: 20px auto;
             padding: 15px;
             background-color: #242424;
             border-radius: 10px;
@@ -201,24 +228,24 @@
             color: #b0b0b0;
             text-align: center;
             padding: 15px;
-            margin-top: 20px; /* تباعد أقل للجوال */
+            margin-top: 20px;
             position: relative;
-            z-index: 1; /* لجعل التذييل فوق الخلفية */
+            z-index: 1;
         }
 
         footer p {
             margin: 0;
-            font-size: 0.9rem; /* حجم أصغر للجوال */
+            font-size: 0.9rem;
         }
 
         /* رابط تواصل معنا */
         .contact-link {
             text-align: center;
-            margin: 20px 0; /* تباعد أقل للجوال */
+            margin: 20px 0;
         }
 
         .contact-link a {
-            font-size: 1.2rem; /* حجم أصغر للجوال */
+            font-size: 1.2rem;
             color: #00ffcc;
             text-decoration: none;
             transition: color 0.3s ease;
@@ -244,8 +271,8 @@
         }
 
         .loader-circle {
-            width: 60px; /* حجم أصغر للجوال */
-            height: 60px; /* حجم أصغر للجوال */
+            width: 60px;
+            height: 60px;
             border: 6px solid #e0e0e0;
             border-top: 6px solid #00ffcc;
             border-radius: 50%;
@@ -254,7 +281,7 @@
 
         .loader-text {
             position: absolute;
-            font-size: 20px; /* حجم أصغر للجوال */
+            font-size: 20px;
             font-weight: bold;
             color: #00ffcc;
             animation: fadeIn 2s ease-in-out;
@@ -273,17 +300,17 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            z-index: -1; /* لجعلها في الخلفية */
+            z-index: -1;
         }
 
         .background-element {
             position: absolute;
-            color: rgba(255, 255, 255, 0.05); /* لون شبه شفاف */
-            font-size: 1rem; /* حجم أصغر للجوال */
+            color: rgba(255, 255, 255, 0.05);
+            font-size: 1rem;
             font-weight: bold;
-            user-select: none; /* منع المستخدم من تحديد النص */
-            opacity: 0.7; /* شفافية */
-            animation: float 20s infinite ease-in-out; /* حركة أبطأ */
+            user-select: none;
+            opacity: 0.7;
+            animation: float 20s infinite ease-in-out;
         }
 
         @keyframes float {
@@ -292,71 +319,6 @@
             50% { transform: translate(-15vw, 15vh); }
             75% { transform: translate(10vw, -20vh); }
             100% { transform: translate(0, 0); }
-        }
-
-        /* استعلامات الوسائط للتجاوب */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem; /* حجم أصغر للجوال */
-            }
-
-            header p {
-                font-size: 0.9rem; /* حجم أصغر للجوال */
-            }
-
-            .categories button {
-                font-size: 0.8rem; /* حجم أصغر للجوال */
-                padding: 8px 16px;
-            }
-
-            .site-card h2 {
-                font-size: 1.1rem; /* حجم أصغر للجوال */
-            }
-
-            .site-card p {
-                font-size: 0.85rem; /* حجم أصغر للجوال */
-            }
-
-            .site-card a {
-                font-size: 0.85rem; /* حجم أصغر للجوال */
-                padding: 6px 12px;
-            }
-
-            .contact-link a {
-                font-size: 1rem; /* حجم أصغر للجوال */
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.5rem; /* حجم أصغر للجوال */
-            }
-
-            header p {
-                font-size: 0.8rem; /* حجم أصغر للجوال */
-            }
-
-            .categories button {
-                font-size: 0.75rem; /* حجم أصغر للجوال */
-                padding: 6px 12px;
-            }
-
-            .site-card h2 {
-                font-size: 1rem; /* حجم أصغر للجوال */
-            }
-
-            .site-card p {
-                font-size: 0.8rem; /* حجم أصغر للجوال */
-            }
-
-            .site-card a {
-                font-size: 0.8rem; /* حجم أصغر للجوال */
-                padding: 5px 10px;
-            }
-
-            .contact-link a {
-                font-size: 0.9rem; /* حجم أصغر للجوال */
-            }
         }
     </style>
 </head>
@@ -379,12 +341,24 @@
     <div class="container">
         <!-- تصنيفات -->
         <div class="categories">
-            <button onclick="showAll()">الكل</button>
-            <button onclick="filterCategory('كتابة')">أدوات كتابة</button>
-            <button onclick="filterCategory('صور')">توليد صور</button>
-            <button onclick="filterCategory('فيديو')">تحرير فيديو</button>
-            <button onclick="filterCategory('تصميم')">تصميم</button>
-            <button onclick="filterCategory('أخرى')">أخرى</button>
+            <button onclick="showAll()">
+                <i class="fas fa-th"></i> الكل
+            </button>
+            <button onclick="filterCategory('كتابة')">
+                <i class="fas fa-pen"></i> أدوات كتابة
+            </button>
+            <button onclick="filterCategory('صور')">
+                <i class="fas fa-image"></i> توليد صور
+            </button>
+            <button onclick="filterCategory('فيديو')">
+                <i class="fas fa-video"></i> تحرير فيديو
+            </button>
+            <button onclick="filterCategory('تصميم')">
+                <i class="fas fa-paint-brush"></i> تصميم
+            </button>
+            <button onclick="filterCategory('أخرى')">
+                <i class="fas fa-ellipsis-h"></i> أخرى
+            </button>
         </div>
 
         <!-- كروت المواقع -->
@@ -586,23 +560,40 @@
         // دالة لعرض جميع المواقع
         function showAll() {
             const sites = document.querySelectorAll('.site-card');
-            sites.forEach(site => site.style.display = 'block');
+            const buttons = document.querySelectorAll('.categories button');
+
+            buttons.forEach(button => button.classList.remove('active'));
+            const activeButton = document.querySelector(`.categories button[onclick*="showAll"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+
+            sites.forEach(site => {
+                site.style.display = 'block';
+                site.style.animation = 'fadeIn 0.5s ease-in-out';
+            });
         }
 
         // دالة لتصفية المواقع حسب التصنيف
         function filterCategory(category) {
             const sites = document.querySelectorAll('.site-card');
+            const buttons = document.querySelectorAll('.categories button');
+
+            buttons.forEach(button => button.classList.remove('active'));
+            const activeButton = document.querySelector(`.categories button[onclick*="${category}"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+
             sites.forEach(site => {
-                if (site.getAttribute('data-category') === category) {
+                if (category === 'الكل' || site.getAttribute('data-category') === category) {
                     site.style.display = 'block';
+                    site.style.animation = 'fadeIn 0.5s ease-in-out';
                 } else {
                     site.style.display = 'none';
                 }
             });
         }
-
-        // عرض جميع المواقع افتراضيًا
-        showAll();
 
         // تأثير الكتابة
         const text = "الذكاء الاصطناعي بين يديك";
@@ -613,9 +604,8 @@
             if (index < text.length) {
                 typingText.textContent += text.charAt(index);
                 index++;
-                setTimeout(typeWriter, 100); // سرعة الكتابة (100 مللي ثانية لكل حرف)
+                setTimeout(typeWriter, 100);
             } else {
-                // بعد اكتمال الكتابة، نضيف تأثير التموج
                 typingText.style.animation = 'ripple 3s infinite ease-in-out';
             }
         }
@@ -633,16 +623,16 @@
 
         function createBackgroundElements() {
             const container = document.getElementById('background-elements');
-            const numElements = 20; // عدد أقل من العناصر
+            const numElements = 20;
 
             for (let i = 0; i < numElements; i++) {
                 const element = document.createElement('div');
                 element.classList.add('background-element');
-                element.textContent = words[Math.floor(Math.random() * words.length)]; // اختيار كلمة عشوائية
-                element.style.left = `${Math.random() * 100}vw`; // توزيع أفقي عشوائي
-                element.style.top = `${Math.random() * 100}vh`; // توزيع عمودي عشوائي
-                element.style.animationDuration = `${Math.random() * 20 + 10}s`; // حركة أبطأ
-                element.style.fontSize = `${Math.random() * 1.5 + 1}rem`; // حجم الخط
+                element.textContent = words[Math.floor(Math.random() * words.length)];
+                element.style.left = `${Math.random() * 100}vw`;
+                element.style.top = `${Math.random() * 100}vh`;
+                element.style.animationDuration = `${Math.random() * 20 + 10}s`;
+                element.style.fontSize = `${Math.random() * 1.5 + 1}rem`;
                 container.appendChild(element);
             }
         }
