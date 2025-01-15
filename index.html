@@ -26,18 +26,79 @@
             color: #ffffff;
             padding: 60px 20px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
         header h1 {
             font-size: 2.5rem;
             margin: 0;
             color: #00ffcc;
+            position: relative;
+            display: inline-block;
+            animation: ripple 3s infinite ease-in-out;
+        }
+
+        header h1::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(0, 255, 204, 0.2), transparent 70%);
+            transform: translate(-50%, -50%) scale(0);
+            animation: rippleEffect 3s infinite ease-in-out;
+            border-radius: 50%;
         }
 
         header p {
             font-size: 1.2rem;
             margin: 10px 0 0;
             color: #b0b0b0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* تأثير الكتابة */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        /* تأثير التموج */
+        @keyframes ripple {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* تأثير التموج الخلفي */
+        @keyframes rippleEffect {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* تأثير الظهور */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
 
         .container {
@@ -194,25 +255,6 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        /* نص الذكاء الاصطناعي المتحرك */
-        .animated-text {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 1.5rem;
-            color: #00ffcc;
-            animation: slideIn 3s ease-in-out;
-        }
-
-        @keyframes slideIn {
-            0% { transform: translateX(-100%); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
-        }
     </style>
 </head>
 <body>
@@ -224,7 +266,7 @@
     </div>
 
     <header>
-        <h1>الذكاء الاصطناعي بين يديك</h1>
+        <h1 id="typing-text"></h1>
         <p>لا داعي لتشتت، تصفح أدوات الذكاء الاصطناعي واستفد من إمكانياتها: الذكاء الاصطناعي الآن بين يديك</p>
     </header>
 
@@ -455,6 +497,25 @@
 
         // عرض جميع المواقع افتراضيًا
         showAll();
+
+        // تأثير الكتابة
+        const text = "الذكاء الاصطناعي بين يديك";
+        const typingText = document.getElementById('typing-text');
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                typingText.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100); // سرعة الكتابة (100 مللي ثانية لكل حرف)
+            } else {
+                // بعد اكتمال الكتابة، نضيف تأثير التموج
+                typingText.style.animation = 'ripple 3s infinite ease-in-out';
+            }
+        }
+
+        // بدء تأثير الكتابة بعد تحميل الصفحة
+        window.onload = typeWriter;
     </script>
 
 </body>
