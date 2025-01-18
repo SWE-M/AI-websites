@@ -115,6 +115,30 @@
             z-index: 1;
         }
 
+        /* خانة البحث */
+        .search-box {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .search-box input {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: 2px solid #00ffcc;
+            border-radius: 25px;
+            background-color: #242424;
+            color: #e0e0e0;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            border-color: #00ccaa;
+            box-shadow: 0 0 8px rgba(0, 255, 204, 0.3);
+        }
+
         /* تصنيفات حديثة */
         .categories {
             display: flex;
@@ -393,8 +417,6 @@
         <button class="close-btn" onclick="closeSidebar()">×</button>
         <h3>إعلانات</h3>
         
- 
-        
         <!-- الإعلان 3 - سيروم ريتينول بالكولاجين لشد البشرة ومضاد للشيخوخة -->
         <div class="ad-item">
             <a href="https://amzn.to/3PGaZOi" target="_blank" rel="noopener noreferrer">
@@ -410,8 +432,6 @@
             </a>
             <p>سيروم تجديد محيط العين</p>
         </div>
-        
-        
     </div>
 
     <header>
@@ -443,6 +463,11 @@
             <button onclick="filterCategory('أخرى')">
                 <i class="fas fa-ellipsis-h"></i> أخرى
             </button>
+        </div>
+
+        <!-- خانة البحث -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="ابحث عن أدوات الذكاء الاصطناعي..." oninput="searchTools()">
         </div>
 
         <!-- كروت المواقع -->
@@ -736,212 +761,212 @@
             </div>
 
             <!-- موقع 37 -->
-<div class="site-card" data-category="فيديو">
-    <h2>Wondershare Virbo</h2>
-    <p>أداة لإنشاء فيديوهات باستخدام الذكاء الاصطناعي، تتيح إنشاء مقاطع فيديو بتقنيات متقدمة.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.virbo.wondershare.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <div class="site-card" data-category="فيديو">
+                <h2>Wondershare Virbo</h2>
+                <p>أداة لإنشاء فيديوهات باستخدام الذكاء الاصطناعي، تتيح إنشاء مقاطع فيديو بتقنيات متقدمة.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.virbo.wondershare.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 38 -->
-<div class="site-card" data-category="فيديو">
-    <h2>Voco AI</h2>
-    <p>أداة لتحويل النص إلى صوت لفيديوهات اليوتيوب باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.voco.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 38 -->
+            <div class="site-card" data-category="فيديو">
+                <h2>Voco AI</h2>
+                <p>أداة لتحويل النص إلى صوت لفيديوهات اليوتيوب باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.voco.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 39 -->
-<div class="site-card" data-category="فيديو">
-    <h2>ClipMaker</h2>
-    <p>أداة لتحرير وإنشاء مقاطع فيديو باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.clipmaker.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 39 -->
+            <div class="site-card" data-category="فيديو">
+                <h2>ClipMaker</h2>
+                <p>أداة لتحرير وإنشاء مقاطع فيديو باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.clipmaker.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 40 -->
-<div class="site-card" data-category="فيديو">
-    <h2>Steve.AI</h2>
-    <p>أداة لإنشاء فيديوهات باستخدام الذكاء الاصطناعي، تتيح تحويل النصوص إلى فيديوهات.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.steve.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 40 -->
+            <div class="site-card" data-category="فيديو">
+                <h2>Steve.AI</h2>
+                <p>أداة لإنشاء فيديوهات باستخدام الذكاء الاصطناعي، تتيح تحويل النصوص إلى فيديوهات.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.steve.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 41 -->
-<div class="site-card" data-category="فيديو">
-    <h2>Invideo</h2>
-    <p>أداة لإنشاء فيديوهات احترافية باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.invideo.io" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 41 -->
+            <div class="site-card" data-category="فيديو">
+                <h2>Invideo</h2>
+                <p>أداة لإنشاء فيديوهات احترافية باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.invideo.io" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 42 -->
-<div class="site-card" data-category="برمجة">
-    <h2>Amazon CodeWhisperer</h2>
-    <p>أداة مساعدة لكتابة الكود باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://aws.amazon.com/codewhisperer" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 42 -->
+            <div class="site-card" data-category="برمجة">
+                <h2>Amazon CodeWhisperer</h2>
+                <p>أداة مساعدة لكتابة الكود باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://aws.amazon.com/codewhisperer" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 43 -->
-<div class="site-card" data-category="برمجة">
-    <h2>Android Studio Bot</h2>
-    <p>أداة مساعدة لتطوير تطبيقات Android باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> مجاني.</p>
-    <a href="https://developer.android.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 43 -->
+            <div class="site-card" data-category="برمجة">
+                <h2>Android Studio Bot</h2>
+                <p>أداة مساعدة لتطوير تطبيقات Android باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> مجاني.</p>
+                <a href="https://developer.android.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 44 -->
-<div class="site-card" data-category="برمجة">
-    <h2>Codiga</h2>
-    <p>أداة لتحليل الكود وتقديم اقتراحات لتحسينه باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.codiga.io" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 44 -->
+            <div class="site-card" data-category="برمجة">
+                <h2>Codiga</h2>
+                <p>أداة لتحليل الكود وتقديم اقتراحات لتحسينه باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.codiga.io" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 45 -->
-<div class="site-card" data-category="برمجة">
-    <h2>CodeWP</h2>
-    <p>أداة لكتابة كود ووردبريس باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.codewp.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 45 -->
+            <div class="site-card" data-category="برمجة">
+                <h2>CodeWP</h2>
+                <p>أداة لكتابة كود ووردبريس باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.codewp.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 46 -->
-<div class="site-card" data-category="برمجة">
-    <h2>Polycoder</h2>
-    <p>أداة لإنشاء الكود باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> مفتوح المصدر.</p>
-    <a href="https://www.polycoder.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 46 -->
+            <div class="site-card" data-category="برمجة">
+                <h2>Polycoder</h2>
+                <p>أداة لإنشاء الكود باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> مفتوح المصدر.</p>
+                <a href="https://www.polycoder.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 47 -->
-<div class="site-card" data-category="أخرى">
-    <h2>Bardeen AI</h2>
-    <p>أداة لأتمتة المهام باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.bardeen.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 47 -->
+            <div class="site-card" data-category="أخرى">
+                <h2>Bardeen AI</h2>
+                <p>أداة لأتمتة المهام باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.bardeen.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 48 -->
-<div class="site-card" data-category="أخرى">
-    <h2>GPTBots</h2>
-    <p>أداة لإنشاء روبوتات دردشة باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.gptbots.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 48 -->
+            <div class="site-card" data-category="أخرى">
+                <h2>GPTBots</h2>
+                <p>أداة لإنشاء روبوتات دردشة باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.gptbots.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 49 -->
-<div class="site-card" data-category="أخرى">
-    <h2>Vondy AI</h2>
-    <p>أداة لتوفير أدوات متنوعة للذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.vondy.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 49 -->
+            <div class="site-card" data-category="أخرى">
+                <h2>Vondy AI</h2>
+                <p>أداة لتوفير أدوات متنوعة للذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.vondy.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 50 -->
-<div class="site-card" data-category="أخرى">
-    <h2>Tweety AI</h2>
-    <p>أداة لإنشاء تغريدات باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.tweetyai.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 50 -->
+            <div class="site-card" data-category="أخرى">
+                <h2>Tweety AI</h2>
+                <p>أداة لإنشاء تغريدات باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.tweetyai.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 51 -->
-<div class="site-card" data-category="أخرى">
-    <h2>Rapidely</h2>
-    <p>أداة لإنشاء محتوى لوسائل التواصل الاجتماعي باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.rapidely.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 51 -->
+            <div class="site-card" data-category="أخرى">
+                <h2>Rapidely</h2>
+                <p>أداة لإنشاء محتوى لوسائل التواصل الاجتماعي باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.rapidely.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 52 -->
-<div class="site-card" data-category="كتابة">
-    <h2>Article Forge</h2>
-    <p>أداة لإنشاء مقالات تلقائيًا باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.articleforge.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 52 -->
+            <div class="site-card" data-category="كتابة">
+                <h2>Article Forge</h2>
+                <p>أداة لإنشاء مقالات تلقائيًا باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.articleforge.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 53 -->
-<div class="site-card" data-category="كتابة">
-    <h2>Scalenut</h2>
-    <p>أداة لتحسين المحتوى التسويقي باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.scalenut.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 53 -->
+            <div class="site-card" data-category="كتابة">
+                <h2>Scalenut</h2>
+                <p>أداة لتحسين المحتوى التسويقي باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.scalenut.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 54 -->
-<div class="site-card" data-category="كتابة">
-    <h2>Sudowrite</h2>
-    <p>أداة لمساعدة الكتاب في إنشاء محتوى إبداعي باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.sudowrite.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 54 -->
+            <div class="site-card" data-category="كتابة">
+                <h2>Sudowrite</h2>
+                <p>أداة لمساعدة الكتاب في إنشاء محتوى إبداعي باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.sudowrite.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 55 -->
-<div class="site-card" data-category="كتابة">
-    <h2>Writerly</h2>
-    <p>أداة لإنشاء محتوى تسويقي باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.writerly.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 55 -->
+            <div class="site-card" data-category="كتابة">
+                <h2>Writerly</h2>
+                <p>أداة لإنشاء محتوى تسويقي باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.writerly.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 56 -->
-<div class="site-card" data-category="كتابة">
-    <h2>Copymatic</h2>
-    <p>أداة لإنشاء محتوى تسويقي باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.copymatic.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 56 -->
+            <div class="site-card" data-category="كتابة">
+                <h2>Copymatic</h2>
+                <p>أداة لإنشاء محتوى تسويقي باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.copymatic.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 57 -->
-<div class="site-card" data-category="كتابة">
-    <h2>Content At Scale</h2>
-    <p>أداة لإنشاء محتوى طويل باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.contentatscale.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 57 -->
+            <div class="site-card" data-category="كتابة">
+                <h2>Content At Scale</h2>
+                <p>أداة لإنشاء محتوى طويل باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.contentatscale.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 58 -->
-<div class="site-card" data-category="كتابة">
-    <h2>Paragraph AI</h2>
-    <p>أداة لمساعدة الكتاب في إنشاء محتوى باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.paragraphai.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 58 -->
+            <div class="site-card" data-category="كتابة">
+                <h2>Paragraph AI</h2>
+                <p>أداة لمساعدة الكتاب في إنشاء محتوى باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.paragraphai.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 59 -->
-<div class="site-card" data-category="كتابة">
-    <h2>SmartWriter.ai</h2>
-    <p>أداة لإنشاء محتوى تسويقي باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.smartwriter.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 59 -->
+            <div class="site-card" data-category="كتابة">
+                <h2>SmartWriter.ai</h2>
+                <p>أداة لإنشاء محتوى تسويقي باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.smartwriter.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 60 -->
-<div class="site-card" data-category="صور">
-    <h2>Visuali</h2>
-    <p>أداة لإنشاء صور باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.visuali.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 60 -->
+            <div class="site-card" data-category="صور">
+                <h2>Visuali</h2>
+                <p>أداة لإنشاء صور باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.visuali.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 61 -->
-<div class="site-card" data-category="صور">
-    <h2>Kiri.art</h2>
-    <p>أداة لإنشاء صور فنية باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.kiri.art" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 61 -->
+            <div class="site-card" data-category="صور">
+                <h2>Kiri.art</h2>
+                <p>أداة لإنشاء صور فنية باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.kiri.art" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
 
-<!-- موقع 62 -->
-<div class="site-card" data-category="صور">
-    <h2>Portraitphoto.ai</h2>
-    <p>أداة لتحرير الصور الشخصية باستخدام الذكاء الاصطناعي.</p>
-    <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
-    <a href="https://www.portraitphoto.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
-</div>
+            <!-- موقع 62 -->
+            <div class="site-card" data-category="صور">
+                <h2>Portraitphoto.ai</h2>
+                <p>أداة لتحرير الصور الشخصية باستخدام الذكاء الاصطناعي.</p>
+                <p><strong>مجاني أم لا:</strong> خطة مجانية محدودة، وخطط مدفوعة.</p>
+                <a href="https://www.portraitphoto.ai" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
+            </div>
         </div>
 
         <!-- رابط تواصل معنا -->
@@ -1068,6 +1093,24 @@
             setTimeout(() => {
                 localStorage.removeItem('hideSidebarUntil');
             }, 10000);
+        }
+
+        // دالة البحث عن الأدوات
+        function searchTools() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const sites = document.querySelectorAll('.site-card');
+
+            sites.forEach(site => {
+                const title = site.querySelector('h2').textContent.toLowerCase();
+                const description = site.querySelector('p').textContent.toLowerCase();
+
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    site.style.display = 'block';
+                    site.style.animation = 'fadeIn 0.5s ease-in-out';
+                } else {
+                    site.style.display = 'none';
+                }
+            });
         }
     </script>
 
