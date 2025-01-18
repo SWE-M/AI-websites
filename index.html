@@ -8,9 +8,9 @@
     <title>أفضل أدوات الذكاء الاصطناعي 2025 - مواقع وتطبيقات AI مجانية ومدفوعة</title>
     <meta name="description" content="اكتشف أفضل أدوات الذكاء الاصطناعي في 2025: أدوات كتابة، توليد صور، تحرير فيديو، تصميم، برمجة، والمزيد. استفد من الأدوات المجانية والمدفوعة لتطوير أعمالك باستخدام الذكاء الاصطناعي.">
     <meta name="keywords" content="ذكاء اصطناعي, أدوات ذكاء اصطناعي, ChatGPT, DALL-E, MidJourney, Jasper, Canva, Grammarly, Runway ML, Notion AI, Descript, DeepL, Pictory, Remove.bg, Adobe Firefly, Uizard, Synthesia, DeepSeek Chat, You.com, Luma Labs, QuillBot, Wordtune, برمجة, أدوات برمجة, AI 2025">
-    <meta name="author" content="اسمك أو اسم شركتك">
+    <meta name="author" content="Mohammed Maridi">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.example.com" />
+    <link rel="canonical" href="https://swe-m.github.io/AI-websites/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* التصميم العام */
@@ -119,24 +119,120 @@
         .search-box {
             margin-bottom: 30px;
             text-align: center;
+            position: relative;
         }
 
         .search-box input {
             width: 100%;
             max-width: 500px;
-            padding: 10px 20px;
+            padding: 15px 20px;
             font-size: 1rem;
-            border: 2px solid #00ffcc;
-            border-radius: 25px;
-            background-color: #242424;
+            border: 2px solid transparent;
+            border-radius: 30px;
+            background-color: rgba(36, 36, 36, 0.8);
             color: #e0e0e0;
             outline: none;
-            transition: all 0.3s ease;
+            transition: all 0.5s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 255, 204, 0.1);
         }
 
         .search-box input:focus {
-            border-color: #00ccaa;
-            box-shadow: 0 0 8px rgba(0, 255, 204, 0.3);
+            border-color: #00ffcc;
+            box-shadow: 0 4px 20px rgba(0, 255, 204, 0.4);
+            transform: scale(1.02);
+        }
+
+        /* تأثير الإطار المتحرك */
+        .search-box::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            background: linear-gradient(45deg, #00ffcc, #00ccaa, #00ffcc);
+            border-radius: 32px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            animation: rotate-border 4s linear infinite;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        .search-box input:focus::before {
+            opacity: 1;
+        }
+
+        @keyframes rotate-border {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* أيقونة البحث */
+        .search-box .search-icon {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            color: rgba(0, 255, 204, 0.5);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus + .search-icon {
+            color: #00ffcc;
+            transform: translateY(-50%) scale(1.2);
+        }
+
+        /* نص الإرشاد */
+        .search-box .placeholder-text {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            color: rgba(224, 224, 224, 0.5);
+            font-size: 0.9rem;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus ~ .placeholder-text {
+            opacity: 0;
+            transform: translateY(-50%) translateX(10px);
+        }
+
+        /* تأثير الضوء الخلفي */
+        .search-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 255, 204, 0.2), transparent 70%);
+            border-radius: 30px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .search-box input:focus::after {
+            opacity: 1;
+            animation: glow 2s infinite ease-in-out;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+            }
         }
 
         /* تصنيفات حديثة */
@@ -468,6 +564,8 @@
         <!-- خانة البحث -->
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="ابحث عن أدوات الذكاء الاصطناعي..." oninput="searchTools()">
+            <span class="search-icon">&#128269;</span>
+           
         </div>
 
         <!-- كروت المواقع -->
