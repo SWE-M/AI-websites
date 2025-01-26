@@ -573,7 +573,7 @@
         </div>
 
         <!-- كروت المواقع -->
-         <div class="sites-grid" id="sites">
+		 <div class="sites-grid" id="sites">
             <!-- موقع 1 -->
             <div class="site-card" data-category="كتابة">
                 <h2>ChatGPT (OpenAI)</h2>
@@ -1651,6 +1651,7 @@
     <a href="https://bard.google.com" target="_blank" rel="noopener noreferrer">زيارة الموقع</a>
 </div>
             
+
         </div>
 
         <!-- رابط تواصل معنا -->
@@ -1773,6 +1774,10 @@
         closeAdButton.addEventListener('click', () => {
             adSidebar.style.display = 'none';
             localStorage.setItem('adClosed', 'true'); // حفظ حالة الإغلاق
+            setTimeout(() => {
+                adSidebar.style.display = 'block'; // إعادة ظهور الإعلان بعد 5 دقائق
+                localStorage.removeItem('adClosed'); // إزالة حالة الإغلاق
+            }, 5 * 60 * 1000); // 5 دقائق
         });
 
         // التحقق من حالة الإغلاق عند تحميل الصفحة
