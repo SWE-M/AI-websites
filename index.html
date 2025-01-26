@@ -477,21 +477,22 @@
             display: flex;
         }
 
-        /* إعلان جانبي */
+        /* بطاقة إعلانية جانبية */
         #ad-sidebar {
             position: fixed;
             top: 50%;
             right: -300px; /* الإعلان مخفي في البداية */
             transform: translateY(-50%);
-            width: 250px;
+            width: auto; /* يتغير حسب حجم الصورة */
             transition: right 0.5s ease;
             z-index: 1000;
             background-color: transparent; /* بدون خلفية بيضاء */
         }
 
         #ad-sidebar img {
-            width: 100%;
+            width: auto; /* يتغير حسب حجم الصورة */
             height: auto;
+            max-width: 250px; /* يمكن تغيير القيمة حسب الحاجة */
             display: block;
             cursor: pointer;
             border-radius: 10px;
@@ -527,12 +528,13 @@
     <!-- عناصر الخلفية -->
     <div id="background-elements"></div>
 
-    <!-- إعلان جانبي -->
+    <!-- بطاقة إعلانية جانبية -->
     <div id="ad-sidebar">
         <button id="close-ad">×</button>
         <a href="https://amzn.to/4hIT1ab" target="_blank">
-            <img src="71g3c0-ujyL._SX3000_.jpg" alt="إعلان">
+            <img src="71g3c0-ujyL._SX3000_.jpg" alt="إعلان 1">
         </a>
+
     </div>
 
     <header>
@@ -1757,7 +1759,7 @@
         // بدء إنشاء العناصر عند تحميل الصفحة
         createBackgroundElements();
 
-        // إدارة الإعلان الجانبي
+        // إدارة البطاقة الإعلانية الجانبية
         const adSidebar = document.getElementById('ad-sidebar');
         const closeAdButton = document.getElementById('close-ad');
 
@@ -1775,9 +1777,9 @@
             adSidebar.style.display = 'none';
             localStorage.setItem('adClosed', 'true'); // حفظ حالة الإغلاق
             setTimeout(() => {
-                adSidebar.style.display = 'block'; // إعادة ظهور الإعلان بعد 5 دقائق
+                adSidebar.style.display = 'block'; // إعادة ظهور الإعلان بعد دقيقتين
                 localStorage.removeItem('adClosed'); // إزالة حالة الإغلاق
-            }, 5 * 60 * 1000); // 5 دقائق
+            }, 2 * 60 * 1000); // دقيقتين
         });
 
         // التحقق من حالة الإغلاق عند تحميل الصفحة
