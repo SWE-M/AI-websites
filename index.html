@@ -482,10 +482,10 @@
 .ad-sidebar {
     position: fixed;
     top: 50%;
-    right: -800px; /* مخفي تمامًا */
+    right: -100%; /* مخفي خارج الشاشة */
     transform: translateY(-50%);
-    width: 800px; /* العرض الافتراضي للإعلان */
-    max-width: 90%; /* الإعلان لن يتجاوز 90% من عرض الشاشة */
+    width: 400px; /* العرض الافتراضي */
+    max-width: 90%; /* مناسب للأجهزة الصغيرة */
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -494,35 +494,24 @@
     z-index: 1000;
 }
 
-/* الإعلان يظهر بالكامل */
+/* عند ظهور الإعلان */
 .ad-sidebar.show {
-    right: 0; /* يُظهر الإعلان بالكامل */
+    right: 0; /* الإعلان ينزلق من الجانب */
 }
 
 /* عند إغلاق الإعلان */
 .ad-sidebar.closed {
-    right: -800px; /* يُخفي الإعلان تمامًا */
+    right: -100%; /* يعود ليختفي بالكامل */
 }
 
-/* تصميم للشاشات الصغيرة (مثل الهواتف) */
+/* إعدادات للأجهزة الصغيرة */
 @media (max-width: 768px) {
     .ad-sidebar {
-        width: 100%; /* الإعلان يأخذ عرض الشاشة بالكامل */
-        height: 300px; /* تغيير ارتفاع الإعلان ليكون أقل */
-        bottom: 0; /* الإعلان يظهر في الأسفل بدلاً من الجانب */
-        top: auto;
-        right: 0; /* يظهر في الأسفل */
-        transform: none; /* إلغاء أي تحويل */
+        width: 300px; /* تقليل العرض */
+        max-width: 85%; /* ملاءمة العرض حسب الشاشة */
     }
 }
 
-/* تصميم للشاشات المتوسطة (مثل الأجهزة اللوحية) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .ad-sidebar {
-        width: 400px; /* الإعلان بحجم أصغر قليلاً */
-        max-width: 80%; /* تقييد العرض بالنسبة للشاشة */
-    }
-}
 
 
 
@@ -1804,14 +1793,12 @@ let adClosed = false;
 window.addEventListener('scroll', () => {
     if (!adClosed && window.scrollY > 300) {
         adSidebar.classList.add('show');
-        adSidebar.classList.remove('closed');
     }
 });
 
 // إغلاق الإعلان
 closeAdBtn.addEventListener('click', () => {
     adSidebar.classList.remove('show');
-    adSidebar.classList.add('closed');
     adClosed = true;
 
     // إعادة عرض الإعلان بعد 5 دقائق
@@ -1819,10 +1806,10 @@ closeAdBtn.addEventListener('click', () => {
         adClosed = false;
         if (window.scrollY > 300) {
             adSidebar.classList.add('show');
-            adSidebar.classList.remove('closed');
         }
     }, 5 * 60 * 1000); // 5 دقائق
 });
+
 
 
 
