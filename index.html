@@ -476,12 +476,14 @@
         }
 
         /* تصميم الإعلان الجانبي */
+/* تصميم الإعلان الجانبي */
 .ad-sidebar {
     position: fixed;
     top: 50%;
     right: -800px; /* مخفي تمامًا */
     transform: translateY(-50%);
-    width: 800px; /* عرض الإعلان */
+    width: 800px; /* العرض الافتراضي للإعلان */
+    max-width: 90%; /* الإعلان لن يتجاوز 90% من عرض الشاشة */
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -499,6 +501,27 @@
 .ad-sidebar.closed {
     right: -800px; /* يُخفي الإعلان تمامًا */
 }
+
+/* تصميم للشاشات الصغيرة (مثل الهواتف) */
+@media (max-width: 768px) {
+    .ad-sidebar {
+        width: 100%; /* الإعلان يأخذ عرض الشاشة بالكامل */
+        height: 300px; /* تغيير ارتفاع الإعلان ليكون أقل */
+        bottom: 0; /* الإعلان يظهر في الأسفل بدلاً من الجانب */
+        top: auto;
+        right: 0; /* يظهر في الأسفل */
+        transform: none; /* إلغاء أي تحويل */
+    }
+}
+
+/* تصميم للشاشات المتوسطة (مثل الأجهزة اللوحية) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .ad-sidebar {
+        width: 400px; /* الإعلان بحجم أصغر قليلاً */
+        max-width: 80%; /* تقييد العرض بالنسبة للشاشة */
+    }
+}
+
 
 
         .ad-sidebar img {
