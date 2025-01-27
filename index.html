@@ -476,23 +476,30 @@
         }
 
         /* تصميم الإعلان الجانبي */
-        .ad-sidebar {
-            position: fixed;
-            top: 50%;
-            right: -300px; /* الإعلان مخفي في البداية */
-            transform: translateY(-50%);
-            width: 700px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: right 0.5s ease-in-out;
-            z-index: 1000;
-        }
+.ad-sidebar {
+    position: fixed;
+    top: 50%;
+    right: -800px; /* مخفي تمامًا */
+    transform: translateY(-50%);
+    width: 800px; /* عرض الإعلان */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: right 0.5s ease-in-out;
+    z-index: 1000;
+}
 
-        .ad-sidebar.visible {
-            right: 20px; /* الإعلان يظهر على الجانب الأيمن */
-        }
+/* الإعلان يظهر بالكامل */
+.ad-sidebar.show {
+    right: 0; /* يُظهر الإعلان بالكامل */
+}
+
+/* عند إغلاق الإعلان */
+.ad-sidebar.closed {
+    right: -800px; /* يُخفي الإعلان تمامًا */
+}
+
 
         .ad-sidebar img {
             width: 100%;
@@ -1763,32 +1770,36 @@
         // بدء إنشاء العناصر عند تحميل الصفحة
         createBackgroundElements();
 
-        // إدارة الإعلان الجانبي
-        const adSidebar = document.getElementById('adSidebar');
-        const closeAdBtn = document.getElementById('closeAdBtn');
+const adSidebar = document.getElementById('adSidebar');
+const closeAdBtn = document.getElementById('closeAdBtn');
 
-        let adClosed = false;
+let adClosed = false;
 
-        // إظهار الإعلان عند التمرير
-        window.addEventListener('scroll', () => {
-            if (!adClosed && window.scrollY > 300) {
-                adSidebar.classList.add('visible');
-            }
-        });
+// إظهار الإعلان عند التمرير
+window.addEventListener('scroll', () => {
+    if (!adClosed && window.scrollY > 300) {
+        adSidebar.classList.add('show');
+        adSidebar.classList.remove('closed');
+    }
+});
 
-        // إغلاق الإعلان
-        closeAdBtn.addEventListener('click', () => {
-            adSidebar.classList.remove('visible');
-            adClosed = true;
+// إغلاق الإعلان
+closeAdBtn.addEventListener('click', () => {
+    adSidebar.classList.remove('show');
+    adSidebar.classList.add('closed');
+    adClosed = true;
 
-            // إعادة عرض الإعلان بعد 5 دقائق
-            setTimeout(() => {
-                adClosed = false;
-                if (window.scrollY > 300) {
-                    adSidebar.classList.add('visible');
-                }
-            }, 5 * 60 * 1000); // 5 دقائق
-        });
+    // إعادة عرض الإعلان بعد 5 دقائق
+    setTimeout(() => {
+        adClosed = false;
+        if (window.scrollY > 300) {
+            adSidebar.classList.add('show');
+            adSidebar.classList.remove('closed');
+        }
+    }, 5 * 60 * 1000); // 5 دقائق
+});
+
+
 
         // دالة البحث عن الأدوات
         function searchTools() {
