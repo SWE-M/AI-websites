@@ -554,14 +554,24 @@
     <!-- عناصر الخلفية -->
     <div id="background-elements"></div>
 
-    <!-- الإعلان الجانبي -->
+    
    <!-- الإعلان الجانبي -->
-<div class="ad-sidebar" id="adSidebar">
-    <button class="close-btn" id="closeAdBtn">×</button>
+<!-- الإعلان الأول -->
+<div class="ad-sidebar" id="adSidebar1">
+    <button class="close-btn" id="closeAdBtn1">×</button>
     <a href="https://amzn.to/40NSy0z" target="_blank">
         <img src="71vYz6N+9IL._SX3000_.jpg" alt="إعلان">
     </a>
 </div>
+
+<!-- الإعلان الثاني -->
+<div class="ad-sidebar" id="adSidebar2">
+    <button class="close-btn" id="closeAdBtn2">×</button>
+    <a href="https://amzn.to/3WDa1X5" target="_blank">
+        <img src="1698065_SA_RamMerch_BuW23_ATF_1500x200_AR.jpg" alt="إعلان آخر">
+    </a>
+</div>
+
 
 
     <header>
@@ -1784,32 +1794,46 @@
 
         // بدء إنشاء العناصر عند تحميل الصفحة
         createBackgroundElements();
+const adSidebar1 = document.getElementById('adSidebar1'); // الإعلان الأول
+const adSidebar2 = document.getElementById('adSidebar2'); // الإعلان الثاني
+const closeAdBtn1 = document.getElementById('closeAdBtn1'); // زر إغلاق الإعلان الأول
+const closeAdBtn2 = document.getElementById('closeAdBtn2'); // زر إغلاق الإعلان الثاني
 
-const adSidebar = document.getElementById('adSidebar');
-const closeAdBtn = document.getElementById('closeAdBtn');
+let adClosed1 = false;
+let adClosed2 = false;
 
-let adClosed = false;
-
-// إظهار الإعلان عند التمرير
+// إظهار الإعلان الأول عند التمرير
 window.addEventListener('scroll', () => {
-    if (!adClosed && window.scrollY > 300) {
-        adSidebar.classList.add('show');
+    if (!adClosed1 && window.scrollY > 300) {
+        adSidebar1.classList.add('show');
     }
 });
 
-// إغلاق الإعلان
-closeAdBtn.addEventListener('click', () => {
-    adSidebar.classList.remove('show');
-    adClosed = true;
+// إغلاق الإعلان الأول
+closeAdBtn1.addEventListener('click', () => {
+    adSidebar1.classList.remove('show');
+    adClosed1 = true;
 
-    // إعادة عرض الإعلان بعد 5 دقائق
+    // عرض الإعلان الثاني بعد دقيقة واحدة
     setTimeout(() => {
-        adClosed = false;
+        adSidebar2.classList.add('show');
+    }, 60000); // دقيقة واحدة
+});
+
+// إغلاق الإعلان الثاني
+closeAdBtn2.addEventListener('click', () => {
+    adSidebar2.classList.remove('show');
+    adClosed2 = true;
+
+    // إعادة عرض الإعلان الأول بعد 5 دقائق
+    setTimeout(() => {
+        adClosed1 = false;
         if (window.scrollY > 300) {
-            adSidebar.classList.add('show');
+            adSidebar1.classList.add('show');
         }
     }, 5 * 60 * 1000); // 5 دقائق
 });
+
 
 
 
