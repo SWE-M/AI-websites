@@ -95,6 +95,7 @@
 
         // بدء إنشاء العناصر عند تحميل الصفحة
         createBackgroundElements();
+/*
 const adSidebar1 = document.getElementById('adSidebar1'); // الإعلان الأول
 const adSidebar2 = document.getElementById('adSidebar2'); // الإعلان الثاني
 const closeAdBtn1 = document.getElementById('closeAdBtn1'); // زر إغلاق الإعلان الأول
@@ -134,6 +135,8 @@ closeAdBtn2.addEventListener('click', () => {
         }
     }, 5 * 60 * 1000); // 5 دقائق
 });
+*/
+
 
 
 
