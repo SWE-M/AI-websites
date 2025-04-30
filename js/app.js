@@ -39,3 +39,13 @@ window.login = async function () {
     alert("❌ فشل تسجيل الدخول: " + error.message);
   }
 }
+// تحويل المستخدم إذا كان مسجل دخول فعليًا
+account.get()
+  .then(() => {
+    // ✅ المستخدم مسجل دخول، نوجهه مباشرة للصفحة الرئيسية
+    window.location.href = 'index.html';
+  })
+  .catch(() => {
+    // ❌ لا يوجد جلسة، يبقى في صفحة login.html
+  });
+
