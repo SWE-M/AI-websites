@@ -11,7 +11,7 @@
         // إخفاء التحميل بعد ثانيتين
         setTimeout(() => {
             document.querySelector('.loader').style.display = 'none';
-        }, 500);
+        }, 250);
 
         // دالة لعرض جميع المواقع
         function showAll() {
