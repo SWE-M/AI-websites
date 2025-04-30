@@ -174,4 +174,37 @@ closeAdBtn2.addEventListener('click', () => {
                 behavior: 'smooth'
             });
         }
+const client = new Appwrite.Client()
+  .setEndpoint('https://fra.cloud.appwrite.io/v1')
+  .setProject('6811254f0019904b7081');
+
+const account = new Appwrite.Account(client);
+
+// جلب معلومات المستخدم
+async function getLoggedUser() {
+  try {
+    const user = await account.get();
+    console.log("🟢 مستخدم مسجّل:", user.name || user.email);
+
+    // تفعيل ميزات مخصصة
+    document.body.classList.add("logged-in");
+
+    showUserFeatures(user);
+
+  } catch (error) {
+    console.log("🔴 لا يوجد مستخدم مسجل حاليًا");
+  }
+}
+
+function showUserFeatures(user) {
+  // مثال: إظهار زر التفضيلات
+  const favBtn = document.getElementById("favoritesOnly");
+  if (favBtn) {
+    favBtn.style.display = "inline-block";
+  }
+}
+
+// تشغيل التحقق بعد تحميل الصفحة
+window.addEventListener("DOMContentLoaded", getLoggedUser);
+
     
