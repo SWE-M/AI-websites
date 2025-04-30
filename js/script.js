@@ -52,7 +52,7 @@
         }
 
         // تأثير الكتابة
-        const text = "الذكاء الاصطناعي بين يديك";
+        const text = "مكتبة الذكاء الاصطناعي";
         const typingText = document.getElementById('typing-text');
         let index = 0;
 
