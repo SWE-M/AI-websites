@@ -184,6 +184,11 @@ const account = new Appwrite.Account(client);
 async function getLoggedUser() {
   try {
     const user = await account.get();
+          document.getElementById("welcomeMessage").textContent = `مرحبًا، ${user.name || user.email}`;
+document.getElementById("logoutBtn").style.display = "inline-block";
+document.getElementById("loginLink").style.display = "none";
+document.getElementById("signupLink").style.display = "none";
+
     console.log("🟢 مستخدم مسجّل:", user.name || user.email);
 
     // تفعيل ميزات مخصصة
@@ -192,7 +197,10 @@ async function getLoggedUser() {
     showUserFeatures(user);
 
   } catch (error) {
-    console.log("🔴 لا يوجد مستخدم مسجل حاليًا");
+    document.getElementById("welcomeMessage").textContent = "مرحبًا بك 👋";
+document.getElementById("loginLink").style.display = "inline-block";
+document.getElementById("signupLink").style.display = "inline-block";
+
   }
 }
 
