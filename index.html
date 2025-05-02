@@ -39,16 +39,28 @@
 
 
 
-    <header>
-        <h1 id="typing-text"></h1>
-        <p>مكتبة شاملة تضم أبرز أدوات الذكاء الاصطناعي التي تحتاجها في مكان واحد</p>
-	      <!-- ✅ أزرار تسجيل الدخول والخروج -->
-  <div id="authPanel" style="position: absolute; top: 10px; left: 20px; text-align: left;">
+<!-- شريط علوي يحتوي على الشعار واسم الموقع -->
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 15px 30px;">
+  <div style="display: flex; align-items: center;">
+    <img src="logo.png" alt="AI Logo" style="height: 32px; margin-left: 12px;">
+    <span style="font-size: 20px; color: #ffffff; font-weight: bold;">ai-websites</span>
+  </div>
+
+  <!-- أزرار تسجيل الدخول والخروج -->
+  <div id="authPanel" style="text-align: left;">
     <span id="welcomeMessage" style="font-size: 14px;"></span><br>
     <button id="logoutBtn" style="display:none; background:#00ffcc; color:#000; border:none; border-radius:6px; padding:6px 12px; cursor:pointer;">تسجيل الخروج</button>
     <a href="login.html" id="loginLink" style="display:none; color:#00ffcc; text-decoration: underline; font-size: 14px; margin-left: 10px;">تسجيل الدخول</a>
     <a href="login.html#signup" id="signupLink" style="display:none; color:#00ffcc; text-decoration: underline; font-size: 14px;">إنشاء حساب</a>
   </div>
+</header>
+
+<!-- عنوان الموقع في المنتصف -->
+<div style="text-align: center; margin-top: 10px;">
+  <h1 id="typing-text" style="font-size: 28px; color: #00ffcc;">منصة أدوات الذكاء الاصطناعي</h1>
+  <p style="color: #ccc;">منصة شاملة تضم أبرز أدوات الذكاء الاصطناعي التي تحتاجها في مكان واحد</p>
+</div>
+
     </header>
 
     <div class="container">
