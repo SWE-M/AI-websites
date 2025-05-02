@@ -37,17 +37,28 @@
 
 
 
-    <header>
-        <h1 id="typing-text"></h1>
-        <p>مكتبة شاملة تضم أبرز أدوات الذكاء الاصطناعي التي تحتاجها في مكان واحد</p>
-	      <!-- ✅ أزرار تسجيل الدخول والخروج -->
-  <div id="authPanel" style="position: absolute; top: 10px; left: 20px; text-align: left;">
+<header style="display: flex; justify-content: space-between; align-items: center; padding: 20px 30px;">
+  <!-- يسار: اللوقو واسم الموقع -->
+  <div style="display: flex; align-items: center;">
+    <img src="logo.png" alt="AI Tools" style="height: 48px; margin-right: 10px;">
+    <span style="color: #00ffcc; font-size: 20px; font-weight: bold;">AI-websites</span>
+  </div>
+
+  <!-- وسط: العنوان والوصف -->
+  <div style="text-align: center; flex: 1;">
+    <h1 style="margin: 0; font-size: 26px; color: #00ffcc;">منصة أدوات الذكاء الاصطناعي</h1>
+    <p style="margin: 0; color: #ccc;">مكتبة شاملة تضم أبرز أدوات الذكاء الاصطناعي التي تحتاجها في مكان واحد</p>
+  </div>
+
+  <!-- يمين: تسجيل الدخول والخروج -->
+  <div id="authPanel" style="text-align: left;">
     <span id="welcomeMessage" style="font-size: 14px;"></span><br>
     <button id="logoutBtn" style="display:none; background:#00ffcc; color:#000; border:none; border-radius:6px; padding:6px 12px; cursor:pointer;">تسجيل الخروج</button>
     <a href="login.html" id="loginLink" style="display:none; color:#00ffcc; text-decoration: underline; font-size: 14px; margin-left: 10px;">تسجيل الدخول</a>
     <a href="login.html#signup" id="signupLink" style="display:none; color:#00ffcc; text-decoration: underline; font-size: 14px;">إنشاء حساب</a>
   </div>
-    </header>
+</header>
+
 
 
 
