@@ -1,5 +1,4 @@
-
-        /* التصميم العام */
+/* التصميم العام */
         body {
             font-family: 'Tahoma', 'Arial', sans-serif;
             font-size: 16px;
@@ -517,4 +516,79 @@
         .close-btn:hover {
             background-color: rgba(0, 0, 0, 0.9);
         }
-    
+
+@media (max-width: 600px) {
+  /* تحسين الهيدر */
+  header {
+    padding: 20px 10px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  /* تصنيفات قابلة للتمرير الأفقي */
+  .categories {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 5px;
+  }
+
+  .categories button {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    font-size: 0.85rem;
+    padding: 10px 16px;
+  }
+
+  /* كروت الأدوات */
+  .site-card {
+    padding: 12px;
+  }
+
+  .site-card h2 {
+    font-size: 1rem;
+  }
+
+  .site-card p {
+    font-size: 0.8rem;
+  }
+
+  .site-card a {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  /* خانة البحث */
+  .search-box input {
+    font-size: 0.9rem;
+    padding: 12px 16px;
+    width: 90%;
+  }
+
+  .search-box .placeholder-text {
+    font-size: 0.8rem;
+  }
+
+  .search-box .search-icon {
+    left: 10px;
+    font-size: 1rem;
+  }
+
+  /* إعلان جانبي */
+  .ad-sidebar {
+    width: 95%;
+    height: auto;
+    right: -100%;
+  }
+
+  .ad-sidebar.show {
+    right: 0;
+  }
+}
