@@ -98,23 +98,31 @@
 
 
 
-   <!-- زر فتح القائمة الجانبية -->
-<button class="menu-toggle" onclick="toggleSidebar()">☰ التصنيفات</button>
-
-<!-- الشريط الجانبي -->
-<div class="sidebar" id="sidebar">
-  <button class="close-sidebar" onclick="toggleSidebar()">✕</button>
-  <div class="sidebar-categories">
-    <button class="category-btn" onclick="showAll()">📋 الكل</button>
-    <button class="category-btn" onclick="filterCategory('كتابة')">✏️ أدوات كتابة</button>
-    <button class="category-btn" onclick="filterCategory('صور')">🖼️ توليد صور</button>
-    <button class="category-btn" onclick="filterCategory('فيديو')">🎥 تحرير فيديو</button>
-    <button class="category-btn" onclick="filterCategory('تصميم')">🖌️ تصميم</button>
-    <button class="category-btn" onclick="filterCategory('برمجة')">💻 برمجة</button>
-    <button class="category-btn" onclick="filterCategory('أخرى')">⋯ أخرى</button>
-  </div>
-</div>
-
+    <div class="container">
+        <!-- تصنيفات -->
+        <div class="categories">
+            <button onclick="showAll()">
+                <i class="fas fa-th"></i> الكل
+            </button>
+            <button onclick="filterCategory('كتابة')">
+                <i class="fas fa-pen"></i> أدوات كتابة
+            </button>
+            <button onclick="filterCategory('صور')">
+                <i class="fas fa-image"></i> توليد صور
+            </button>
+            <button onclick="filterCategory('فيديو')">
+                <i class="fas fa-video"></i> تحرير فيديو
+            </button>
+            <button onclick="filterCategory('تصميم')">
+                <i class="fas fa-paint-brush"></i> تصميم
+            </button>
+            <button onclick="filterCategory('برمجة')">
+                <i class="fas fa-code"></i> برمجة
+            </button>
+            <button onclick="filterCategory('أخرى')">
+                <i class="fas fa-ellipsis-h"></i> أخرى
+            </button>
+        </div>
 
         <!-- خانة البحث -->
         <div class="search-box">
