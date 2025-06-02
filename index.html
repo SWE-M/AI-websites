@@ -48,6 +48,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!-- رسالة ترحيب تظهر بعد تسجيل الدخول -->
+<p id="welcomeUser" style="display:none; color: #00ffcc; font-weight:bold; text-align:center; margin: 20px;">
+</p>
 
     <!-- دائرة التحميل -->
     <div class="loader">
@@ -1360,7 +1363,30 @@
     <!-- زر العودة للأعلى -->
     <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
 
-    
+    <!-- ✅ التحقق من جلسة Appwrite -->
+<script src="https://cdn.jsdelivr.net/npm/appwrite@13.0.1"></script>
+<script>
+const client = new Appwrite.Client()
+  .setEndpoint('https://fra.cloud.appwrite.io/v1')
+  .setProject('6811254f0019904b7081');
+
+const account = new Appwrite.Account(client);
+
+window.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const user = await account.get();
+    console.log("✅ المستخدم مسجل الدخول:", user.name);
+
+    // عرض رسالة ترحيبية
+    document.body.classList.add("user-logged-in");
+    document.getElementById("welcomeUser").textContent = `👋 مرحبًا ${user.name}`;
+    document.getElementById("welcomeUser").style.display = "block";
+  } catch (err) {
+    console.log("❌ المستخدم غير مسجل دخول");
+  }
+});
+</script>
+
   <script src="js/script.js"></script>
 </body>
 </html>
