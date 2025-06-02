@@ -170,3 +170,41 @@ footer p {
   margin: 0;
   font-size: 0.9rem;
 }
+.search-box {
+  margin: 40px auto;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+}
+
+.search-box input[type="text"] {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  background-color: #222;
+  color: #00ffcc;
+  outline: none;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-box input[type="text"]::placeholder {
+  color: #888;
+}
+
+.search-box input[type="text"]:focus {
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+  background-color: #1a1a1a;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: #00ffcc;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
