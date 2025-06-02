@@ -1386,6 +1386,23 @@ window.addEventListener('DOMContentLoaded', async () => {
   }
 });
 </script>
+<script>
+const text = "منصة أدوات الذكاء الاصطناعي";
+const typingElement = document.getElementById("typing-text");
+let index = 0;
+
+function type() {
+  if (index < text.length) {
+    typingElement.innerHTML += text.charAt(index);
+    index++;
+    setTimeout(type, 100); // سرعة الكتابة
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  type();
+});
+</script>
 
   <script src="js/script.js"></script>
 </body>
