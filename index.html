@@ -149,31 +149,34 @@
 
 
 
-    <div class="container">
-        <!-- تصنيفات -->
-        <div class="categories">
-            <button onclick="showAll()">
-                <i class="fas fa-th"></i> الكل
-            </button>
-            <button onclick="filterCategory('كتابة')">
-                <i class="fas fa-pen"></i> أدوات كتابة
-            </button>
-            <button onclick="filterCategory('صور')">
-                <i class="fas fa-image"></i> توليد صور
-            </button>
-            <button onclick="filterCategory('فيديو')">
-                <i class="fas fa-video"></i> تحرير فيديو
-            </button>
-            <button onclick="filterCategory('تصميم')">
-                <i class="fas fa-paint-brush"></i> تصميم
-            </button>
-            <button onclick="filterCategory('برمجة')">
-                <i class="fas fa-code"></i> برمجة
-            </button>
-            <button onclick="filterCategory('أخرى')">
-                <i class="fas fa-ellipsis-h"></i> أخرى
-            </button>
-        </div>
+   <div class="container">
+    <!-- تصنيفات أدوات الذكاء الاصطناعي -->
+    <h2 class="section-title">تصفية أدوات الذكاء الاصطناعي حسب النوع:</h2>
+    <div class="categories">
+        <button onclick="showAll()" aria-label="عرض كل الأدوات">
+            <i class="fas fa-th"></i> الكل
+        </button>
+        <button onclick="filterCategory('كتابة')" aria-label="عرض أدوات الكتابة">
+            <i class="fas fa-pen"></i> أدوات كتابة
+        </button>
+        <button onclick="filterCategory('صور')" aria-label="عرض أدوات الصور">
+            <i class="fas fa-image"></i> توليد صور
+        </button>
+        <button onclick="filterCategory('فيديو')" aria-label="عرض أدوات الفيديو">
+            <i class="fas fa-video"></i> تحرير فيديو
+        </button>
+        <button onclick="filterCategory('تصميم')" aria-label="عرض أدوات التصميم">
+            <i class="fas fa-paint-brush"></i> تصميم
+        </button>
+        <button onclick="filterCategory('برمجة')" aria-label="عرض أدوات البرمجة">
+            <i class="fas fa-code"></i> برمجة
+        </button>
+        <button onclick="filterCategory('أخرى')" aria-label="عرض أدوات متنوعة">
+            <i class="fas fa-ellipsis-h"></i> أخرى
+        </button>
+    </div>
+</div>
+
 
         <!-- خانة البحث -->
         <div class="search-box">
