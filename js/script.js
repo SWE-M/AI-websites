@@ -52,22 +52,22 @@
         }
 
         // تأثير الكتابة
-        const text = "منصة أدوات الذكاء الاصطناعي";
-        const typingText = document.getElementById('typing-text');
-        let index = 0;
+const text = "منصة أدوات الذكاء الاصطناعي";
+const typingText = document.getElementById('typing-text');
+let index = 0;
 
-        function typeWriter() {
-            if (index < text.length) {
-                typingText.textContent += text.charAt(index);
-                index++;
-                setTimeout(typeWriter, 100);
-            } else {
-                typingText.style.animation = 'ripple 3s infinite ease-in-out';
-            }
-        }
+function typeWriter() {
+    if (index < text.length) {
+        typingText.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100);
+    }
+}
 
-        // بدء تأثير الكتابة بعد تحميل الصفحة
-        window.onload = typeWriter;
+// تأخير بسيط قبل بدء الكتابة
+window.addEventListener("load", () => {
+    setTimeout(typeWriter, 800);
+});
 
         // إنشاء عناصر الخلفية
         const words = [
