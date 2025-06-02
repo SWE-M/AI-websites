@@ -9,9 +9,31 @@
 
 
         // إخفاء التحميل بعد ثانيتين
-        setTimeout(() => {
-            document.querySelector('.loader').style.display = 'none';
-        }, 2000);
+window.addEventListener('DOMContentLoaded', async () => {
+  const loader = document.querySelector('.loader');
+  if (loader) loader.style.display = 'none';
+
+  const client = new Appwrite.Client()
+    .setEndpoint('https://fra.cloud.appwrite.io/v1')
+    .setProject('6811254f0019904b7081');
+
+  const account = new Appwrite.Account(client);
+
+  try {
+    const user = await account.get();
+    console.log("✅ المستخدم مسجل الدخول:", user.name);
+    document.body.classList.add("user-logged-in");
+
+    const welcomeElement = document.getElementById("welcomeUser");
+    if (welcomeElement) {
+      welcomeElement.textContent = `👋 مرحبًا ${user.name}`;
+      welcomeElement.style.display = "block";
+    }
+  } catch (err) {
+    console.log("❌ المستخدم غير مسجل دخول");
+  }
+});
+
 
         // دالة لعرض جميع المواقع
         function showAll() {
