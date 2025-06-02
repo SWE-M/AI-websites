@@ -13,7 +13,17 @@ window.signup = async function () {
   try {
     await account.create('unique()', email, password, name);
     await account.createVerification('https://ai-websites.online/verified.html');
-    alert("✅ تم إنشاء الحساب. تحقق من بريدك الإلكتروني.");
+    // عرض رسالة نجاح جميلة على الصفحة
+const successMessage = document.getElementById("successMessage");
+successMessage.innerText = "✅ تم إنشاء الحساب! تحقق من بريدك الإلكتروني.";
+successMessage.style.display = "block";
+successMessage.scrollIntoView({ behavior: "smooth" });
+
+// إعادة تعيين الحقول
+document.getElementById("signupName").value = "";
+document.getElementById("signupEmail").value = "";
+document.getElementById("signupPassword").value = "";
+
   } catch (error) {
     alert("❌ خطأ أثناء التسجيل: " + error.message);
   }
