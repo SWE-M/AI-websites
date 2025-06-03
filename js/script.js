@@ -1,10 +1,11 @@
 
+// عند تحميل الصفحة
 window.addEventListener('DOMContentLoaded', async () => {
-  // إخفاء اللودر أولاً
+  // إخفاء اللودر
   const loader = document.querySelector('.loader');
   if (loader) loader.style.display = 'none';
 
-  // تهيئة Appwrite
+  // إعداد Appwrite
   const client = new Appwrite.Client()
     .setEndpoint('https://fra.cloud.appwrite.io/v1')
     .setProject('6811254f0019904b7081');
@@ -31,7 +32,7 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// دوال تصفية الأدوات حسب التصنيف
+// عرض جميع الأدوات
 function showAll() {
   const sites = document.querySelectorAll('.site-card');
   const buttons = document.querySelectorAll('.categories button');
@@ -46,6 +47,7 @@ function showAll() {
   });
 }
 
+// فلترة الأدوات حسب التصنيف
 function filterCategory(category) {
   const sites = document.querySelectorAll('.site-card');
   const buttons = document.querySelectorAll('.categories button');
@@ -60,6 +62,23 @@ function filterCategory(category) {
       site.style.animation = 'fadeIn 0.5s ease-in-out';
     } else {
       site.style.display = 'none';
+    }
+  });
+}
+
+// ✅ دالة البحث داخل الأدوات
+function searchTools() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const cards = document.querySelectorAll(".site-card");
+
+  cards.forEach(card => {
+    const title = card.querySelector("h2").textContent.toLowerCase();
+    const desc = card.querySelector("p").textContent.toLowerCase();
+
+    if (title.includes(input) || desc.includes(input)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
     }
   });
 }
