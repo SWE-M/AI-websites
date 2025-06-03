@@ -170,3 +170,46 @@ footer p {
   margin: 0;
   font-size: 0.9rem;
 }
+
+/* ========== خانة البحث ========== */
+.search-box {
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  background-color: rgba(36, 36, 36, 0.8);
+  color: #e0e0e0;
+  outline: none;
+  transition: all 0.5s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 255, 204, 0.1);
+}
+
+.search-box input:focus {
+  border-color: #00ffcc;
+  box-shadow: 0 4px 20px rgba(0, 255, 204, 0.4);
+  transform: scale(1.02);
+}
+
+.search-box .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: rgba(0, 255, 204, 0.5);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus + .search-icon {
+  color: #00ffcc;
+  transform: translateY(-50%) scale(1.2);
+}
